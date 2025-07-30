@@ -247,9 +247,8 @@ def main():
 
     while True:
         ahora = datetime.now()
-        # Log periódico cada 5 minutos para confirmar que el script está activo
-        if ahora.minute % 5 == 0 and ahora.second < 2:
-            print(f"[{ahora.strftime('%H:%M:%S')}] Script activo y esperando partidos...", flush=True)
+        # Log periódico cada minuto para confirmar que el script está activo
+        print(f"[{ahora.strftime('%H:%M:%S')}] Script activo y esperando partidos...", flush=True)
 
         partidos = cargar_partidos()
         cambios = False
