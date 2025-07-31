@@ -223,22 +223,44 @@ def enviar_alerta_scrapeo(partido):
     print(f"📋 Scrapeo enviado: {mensaje}", flush=True)
 
 def main():
+    def scrapeo_general():
+        max_reintentos = 10
+        espera_min = 3
+        intentos = 0
+        partidos = scrape_partidos()
+        while not partidos and intentos < max_reintentos:
+            intentos += 1
+            print(f"[Reintento {intentos}] No se encontraron partidos, esperando {espera_min} minutos...", flush=True)
+            time.sleep(espera_min * 60)
+            partidos = scrape_partidos()
+        if not partidos:
+            notifier = TelegramNotifier(settings.TELEGRAM_BOT_TOKEN, settings.TELEGRAM_CHAT_ID)
+            hoy_str = datetime.now().strftime('%Y-%m-%d')
+            mensaje = (
+                f"⚠️ No se encontraron partidos tras {max_reintentos} intentos de scrapeo. "
+                f"Hoy ({hoy_str}) no hay partidos disponibles en la web para alertar."
+            )
+            notifier.send_message_sync(mensaje)
+            print(mensaje, flush=True)
+            return False
+        for partido in partidos:
+            partido['alertado'] = False
+        guardar_partidos(partidos)
+        # Calcular resumen por deporte
+        resumen = {}
+        for partido in partidos:
+            d = partido.get('deporte', 'Otro')
+            resumen[d] = resumen.get(d, 0) + 1
+        total = len(partidos)
+        resumen_str = f"Partidos scrapeados para hoy: {total}\n" + "\n".join([f"{k}: {v}" for k, v in resumen.items()])
+        # Enviar resumen a Telegram
+        notifier = TelegramNotifier(settings.TELEGRAM_BOT_TOKEN, settings.TELEGRAM_CHAT_ID)
+        notifier.send_message_sync(resumen_str)
+        print(resumen_str, flush=True)
+        return True
+
     print("Scrapeando partidos y guardando horas...", flush=True)
-    partidos = scrape_partidos()
-    for partido in partidos:
-        partido['alertado'] = False
-    guardar_partidos(partidos)
-    # Calcular resumen por deporte
-    resumen = {}
-    for partido in partidos:
-        d = partido.get('deporte', 'Otro')
-        resumen[d] = resumen.get(d, 0) + 1
-    total = len(partidos)
-    resumen_str = f"Partidos scrapeados para hoy: {total}\n" + "\n".join([f"{k}: {v}" for k, v in resumen.items()])
-    # Enviar resumen a Telegram
-    notifier = TelegramNotifier(settings.TELEGRAM_BOT_TOKEN, settings.TELEGRAM_CHAT_ID)
-    notifier.send_message_sync(resumen_str)
-    print(resumen_str, flush=True)
+    scrapeo_general()
     print("Esperando partidos próximos para alerta...", flush=True)
     fecha_ultimo_scrapeo = datetime.now().date()
     scrapeo_realizado_hoy = True
@@ -247,6 +269,12 @@ def main():
 
     while True:
         ahora = datetime.now()
+        # Scrapeo general diario a las 10:00 AM con reintentos y aviso si no hay partidos
+        if ahora.hour == 10 and ahora.minute == 0:
+            print("Ejecutando scrapeo general programado de las 10:00 AM...", flush=True)
+            exito = scrapeo_general()
+            # Esperar 60 segundos para evitar múltiples ejecuciones en el mismo minuto
+            time.sleep(60)
         # Log periódico cada minuto para confirmar que el script está activo
         print(f"[{ahora.strftime('%H:%M:%S')}] Script activo y esperando partidos...", flush=True)
 

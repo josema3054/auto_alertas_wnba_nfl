@@ -1,0 +1,356 @@
+2025-07-30 17:31:20,342 WARNING: No se encontró resultado para: 2025-07-25 MLB | Col vs Bal
+Normalizados: col vs bal
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:31:24,540 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Pho vs Ny
+Normalizados: pho vs ny
+Equipos detectados en resultados: []
+
+2025-07-30 17:31:29,103 WARNING: No se encontró resultado para: 2025-07-25 MLB | Mia vs Mil
+Normalizados: mia vs mil
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:31:38,413 WARNING: No se encontró resultado para: 2025-07-25 MLB | Tor vs Det
+Normalizados: tor vs det
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:31:48,392 WARNING: No se encontró resultado para: 2025-07-25 MLB | Ath vs Hou
+Normalizados: ath vs hou
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:32:01,758 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Dal vs Gs
+Normalizados: dal vs gs
+Equipos detectados en resultados: []
+
+2025-07-30 17:32:12,567 WARNING: No se encontró resultado para: 2025-07-25 MLB | Lad vs Bos
+Normalizados: lad vs bos
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:32:17,517 WARNING: No se encontró resultado para: 2025-07-25 MLB | Phi vs Nyy
+Normalizados: phi vs nyy
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:32:21,605 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Lv vs Min
+Normalizados: lv vs min
+Equipos detectados en resultados: []
+
+2025-07-30 17:32:26,466 WARNING: No se encontró resultado para: 2025-07-25 MLB | Nym vs Sf
+Normalizados: nym vs sf
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:33:01,095 WARNING: No se encontró resultado para: 2025-07-26 WNBA | La vs Ny
+Normalizados: la vs ny
+Equipos detectados en resultados: []
+
+2025-07-30 17:33:10,499 WARNING: No se encontró resultado para: 2025-07-26 MLB | Sd vs Stl
+Normalizados: sd vs stl
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:33:15,275 WARNING: No se encontró resultado para: 2025-07-26 MLB | Sea vs Laa
+Normalizados: sea vs laa
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:33:19,353 WARNING: No se encontró resultado para: 2025-07-26 MLB | Phi vs Nyy
+Normalizados: phi vs nyy
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:33:25,143 WARNING: No se encontró resultado para: 2025-07-26 MLB | Ath vs Hou
+Normalizados: ath vs hou
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:33:37,855 WARNING: No se encontró resultado para: 2025-07-26 WNBA | Sea vs Was
+Normalizados: sea vs was
+Equipos detectados en resultados: []
+
+2025-07-30 17:33:42,357 WARNING: No se encontró resultado para: 2025-07-26 MLB | Tor vs Det
+Normalizados: tor vs det
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:33:54,068 WARNING: No se encontró resultado para: 2025-07-26 MLB | Mia vs Mil
+Normalizados: mia vs mil
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:33:58,402 WARNING: No se encontró resultado para: 2025-07-26 MLB | Nym vs Sf
+Normalizados: nym vs sf
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:34:30,793 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Atl vs Min
+Normalizados: atl vs min
+Equipos detectados en resultados: []
+
+2025-07-30 17:34:36,686 WARNING: No se encontró resultado para: 2025-07-27 MLB | Sd vs Stl
+Normalizados: sd vs stl
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 17:35:18,229 WARNING: No se encontró resultado para: 2025-07-27 MLB | Ath vs Hou
+Normalizados: ath vs hou
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 17:35:31,379 WARNING: No se encontró resultado para: 2025-07-27 MLB | Nym vs Sf
+Normalizados: nym vs sf
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 17:35:36,777 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Lv vs Dal
+Normalizados: lv vs dal
+Equipos detectados en resultados: []
+
+2025-07-30 17:35:40,886 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Ind vs Chi
+Normalizados: ind vs chi
+Equipos detectados en resultados: []
+
+2025-07-30 17:35:49,209 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Pho vs Was
+Normalizados: pho vs was
+Equipos detectados en resultados: []
+
+2025-07-30 17:35:53,657 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Gs vs Con
+Normalizados: gs vs con
+Equipos detectados en resultados: []
+
+
+--- Nueva ejecuciÃ³n del script ---
+2025-07-30 17:46:46,097 INFO: Inicio de ejecución de scrapeo_historico.py
+2025-07-30 17:47:10,621 WARNING: No se encontró resultado para: 2025-07-25 MLB | Col vs Bal
+Normalizados: col vs bal
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:47:14,895 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Pho vs Ny
+Normalizados: pho vs ny
+Equipos detectados en resultados: []
+
+2025-07-30 17:47:20,608 WARNING: No se encontró resultado para: 2025-07-25 MLB | Mia vs Mil
+Normalizados: mia vs mil
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:47:31,160 WARNING: No se encontró resultado para: 2025-07-25 MLB | Tor vs Det
+Normalizados: tor vs det
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:47:40,411 WARNING: No se encontró resultado para: 2025-07-25 MLB | Ath vs Hou
+Normalizados: ath vs hou
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:47:54,969 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Dal vs Gs
+Normalizados: dal vs gs
+Equipos detectados en resultados: []
+
+2025-07-30 17:48:04,100 WARNING: No se encontró resultado para: 2025-07-25 MLB | Lad vs Bos
+Normalizados: lad vs bos
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:48:09,001 WARNING: No se encontró resultado para: 2025-07-25 MLB | Phi vs Nyy
+Normalizados: phi vs nyy
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:48:13,109 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Lv vs Min
+Normalizados: lv vs min
+Equipos detectados en resultados: []
+
+2025-07-30 17:48:19,170 WARNING: No se encontró resultado para: 2025-07-25 MLB | Nym vs Sf
+Normalizados: nym vs sf
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 17:48:55,461 WARNING: No se encontró resultado para: 2025-07-26 WNBA | La vs Ny
+Normalizados: la vs ny
+Equipos detectados en resultados: []
+
+2025-07-30 17:49:04,109 WARNING: No se encontró resultado para: 2025-07-26 MLB | Sd vs Stl
+Normalizados: sd vs stl
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:49:08,373 WARNING: No se encontró resultado para: 2025-07-26 MLB | Sea vs Laa
+Normalizados: sea vs laa
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:49:12,429 WARNING: No se encontró resultado para: 2025-07-26 MLB | Phi vs Nyy
+Normalizados: phi vs nyy
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:49:16,673 WARNING: No se encontró resultado para: 2025-07-26 MLB | Ath vs Hou
+Normalizados: ath vs hou
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:49:29,349 WARNING: No se encontró resultado para: 2025-07-26 WNBA | Sea vs Was
+Normalizados: sea vs was
+Equipos detectados en resultados: []
+
+2025-07-30 17:49:33,810 WARNING: No se encontró resultado para: 2025-07-26 MLB | Tor vs Det
+Normalizados: tor vs det
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:49:43,540 WARNING: No se encontró resultado para: 2025-07-26 MLB | Mia vs Mil
+Normalizados: mia vs mil
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:49:48,038 WARNING: No se encontró resultado para: 2025-07-26 MLB | Nym vs Sf
+Normalizados: nym vs sf
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 17:50:20,714 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Atl vs Min
+Normalizados: atl vs min
+Equipos detectados en resultados: []
+
+2025-07-30 17:50:29,082 WARNING: No se encontró resultado para: 2025-07-27 MLB | Sd vs Stl
+Normalizados: sd vs stl
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 17:51:08,487 WARNING: No se encontró resultado para: 2025-07-27 MLB | Ath vs Hou
+Normalizados: ath vs hou
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 17:51:16,839 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Lv vs Dal
+Normalizados: lv vs dal
+Equipos detectados en resultados: []
+
+2025-07-30 17:51:25,194 WARNING: No se encontró resultado para: 2025-07-27 MLB | Nym vs Sf
+Normalizados: nym vs sf
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 17:51:29,268 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Ind vs Chi
+Normalizados: ind vs chi
+Equipos detectados en resultados: []
+
+2025-07-30 17:51:37,689 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Pho vs Was
+Normalizados: pho vs was
+Equipos detectados en resultados: []
+
+2025-07-30 17:51:43,414 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Gs vs Con
+Normalizados: gs vs con
+Equipos detectados en resultados: []
+
+
+--- Nueva ejecuciÃ³n del script ---
+2025-07-30 18:02:46,246 INFO: Inicio de ejecución de scrapeo_historico.py
+2025-07-30 18:03:09,806 WARNING: No se encontró resultado para: 2025-07-25 MLB | Col vs Bal
+Normalizados: colorado vs baltimore
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:03:16,110 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Pho vs Ny
+Normalizados: phoenix vs new york
+Equipos detectados en resultados: []
+
+2025-07-30 18:03:20,516 WARNING: No se encontró resultado para: 2025-07-25 MLB | Mia vs Mil
+Normalizados: miami vs milwaukee
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:03:30,148 WARNING: No se encontró resultado para: 2025-07-25 MLB | Tor vs Det
+Normalizados: toronto vs detroit
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:03:41,202 WARNING: No se encontró resultado para: 2025-07-25 MLB | Ath vs Hou
+Normalizados: oakland vs houston
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:03:45,476 WARNING: No se encontró resultado para: 2025-07-25 MLB | Az vs Pit
+Normalizados: arizona vs pittsburgh
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:03:56,266 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Dal vs Gs
+Normalizados: dallas vs golden state
+Equipos detectados en resultados: []
+
+2025-07-30 18:04:05,357 WARNING: No se encontró resultado para: 2025-07-25 MLB | Lad vs Bos
+Normalizados: dodgers vs boston
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:04:09,877 WARNING: No se encontró resultado para: 2025-07-25 MLB | Phi vs Nyy
+Normalizados: philadelphia vs yankees
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:04:16,254 WARNING: No se encontró resultado para: 2025-07-25 WNBA | Lv vs Min
+Normalizados: las vegas vs minnesota
+Equipos detectados en resultados: []
+
+2025-07-30 18:04:20,419 WARNING: No se encontró resultado para: 2025-07-25 MLB | Nym vs Sf
+Normalizados: mets vs san francisco
+Equipos detectados en resultados: ['TB vs CIN', 'SD vs STL', 'CHC vs CHW', 'ATL vs TEX', 'WAS vs MIN', 'SEA vs LAA']
+
+2025-07-30 18:04:54,185 WARNING: No se encontró resultado para: 2025-07-26 WNBA | La vs Ny
+Normalizados: los angeles vs new york
+Equipos detectados en resultados: []
+
+2025-07-30 18:05:03,859 WARNING: No se encontró resultado para: 2025-07-26 MLB | Sd vs Stl
+Normalizados: san diego vs st louis
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:05:08,323 WARNING: No se encontró resultado para: 2025-07-26 MLB | Sea vs Laa
+Normalizados: seattle vs angels
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:05:12,652 WARNING: No se encontró resultado para: 2025-07-26 MLB | Phi vs Nyy
+Normalizados: philadelphia vs yankees
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:05:17,110 WARNING: No se encontró resultado para: 2025-07-26 MLB | Ath vs Hou
+Normalizados: oakland vs houston
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:05:21,535 WARNING: No se encontró resultado para: 2025-07-26 MLB | Chc vs Chw
+Normalizados: chicago vs chicago
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:05:31,873 WARNING: No se encontró resultado para: 2025-07-26 WNBA | Sea vs Was
+Normalizados: seattle vs washington
+Equipos detectados en resultados: []
+
+2025-07-30 18:05:36,669 WARNING: No se encontró resultado para: 2025-07-26 MLB | Tor vs Det
+Normalizados: toronto vs detroit
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:05:46,015 WARNING: No se encontró resultado para: 2025-07-26 MLB | Mia vs Mil
+Normalizados: miami vs milwaukee
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:05:52,148 WARNING: No se encontró resultado para: 2025-07-26 MLB | Nym vs Sf
+Normalizados: mets vs san francisco
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:06:02,959 WARNING: No se encontró resultado para: 2025-07-26 MLB | Was vs Min
+Normalizados: washington vs minnesota
+Equipos detectados en resultados: ['CLE vs KC', 'AZ vs PIT', 'TB vs CIN', 'COL vs BAL', 'ATL vs TEX', 'LAD vs BOS']
+
+2025-07-30 18:06:27,160 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Atl vs Min
+Normalizados: atlanta vs minnesota
+Equipos detectados en resultados: []
+
+2025-07-30 18:06:36,943 WARNING: No se encontró resultado para: 2025-07-27 MLB | Sd vs Stl
+Normalizados: san diego vs st louis
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 18:06:45,798 WARNING: No se encontró resultado para: 2025-07-27 MLB | Was vs Min
+Normalizados: washington vs minnesota
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 18:07:04,570 WARNING: No se encontró resultado para: 2025-07-27 MLB | Chc vs Chw
+Normalizados: chicago vs chicago
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 18:07:18,509 WARNING: No se encontró resultado para: 2025-07-27 MLB | Ath vs Hou
+Normalizados: oakland vs houston
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 18:07:28,868 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Lv vs Dal
+Normalizados: las vegas vs dallas
+Equipos detectados en resultados: []
+
+2025-07-30 18:07:37,960 WARNING: No se encontró resultado para: 2025-07-27 MLB | Nym vs Sf
+Normalizados: mets vs san francisco
+Equipos detectados en resultados: ['LAD vs BOS', 'AZ vs PIT', 'PHI vs NYY', 'COL vs BAL', 'TOR vs DET', 'TB vs CIN', 'CLE vs KC', 'MIA vs MIL', 'ATL vs TEX', 'SEA vs LAA']
+
+2025-07-30 18:07:42,202 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Ind vs Chi
+Normalizados: indiana vs chicago
+Equipos detectados en resultados: []
+
+2025-07-30 18:07:52,546 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Pho vs Was
+Normalizados: phoenix vs washington
+Equipos detectados en resultados: []
+
+2025-07-30 18:07:57,588 WARNING: No se encontró resultado para: 2025-07-27 WNBA | Gs vs Con
+Normalizados: golden state vs connecticut
+Equipos detectados en resultados: []
+
+
+--- Nueva ejecuciÃ³n del script ---
+2025-07-30 18:13:09,250 INFO: Inicio de ejecución de scrapeo_historico.py
+
+--- Nueva ejecuciÃ³n del script ---
+2025-07-31 09:28:29,232 INFO: Inicio de ejecución de scrapeo_historico.py
