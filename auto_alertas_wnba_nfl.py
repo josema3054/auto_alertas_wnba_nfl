@@ -183,6 +183,27 @@ def cargar_partidos():
     with open(PARTIDOS_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def comparar_partidos(partidos_nuevos, partidos_existentes):
+    """Compara partidos nuevos vs existentes y retorna los que son realmente nuevos"""
+    def normalizar_simple(texto):
+        return texto.strip().lower() if isinstance(texto, str) else ''
+    
+    def partido_existe(partido_nuevo, lista_existentes):
+        for existente in lista_existentes:
+            if (normalizar_simple(partido_nuevo.get('equipo1')) == normalizar_simple(existente.get('equipo1')) and
+                normalizar_simple(partido_nuevo.get('equipo2')) == normalizar_simple(existente.get('equipo2')) and
+                normalizar_simple(partido_nuevo.get('fecha')) == normalizar_simple(existente.get('fecha')) and
+                normalizar_simple(partido_nuevo.get('hora')) == normalizar_simple(existente.get('hora'))):
+                return True
+        return False
+    
+    partidos_realmente_nuevos = []
+    for partido in partidos_nuevos:
+        if not partido_existe(partido, partidos_existentes):
+            partidos_realmente_nuevos.append(partido)
+    
+    return partidos_realmente_nuevos
+
 ## Eliminar definición duplicada de hora_a_datetime
 def hora_a_datetime(fecha_str, hora_str):
     # fecha_str: '2025-07-27', hora_str: '22:31'
@@ -223,7 +244,7 @@ def enviar_alerta_scrapeo(partido):
     print(f"📋 Scrapeo enviado: {mensaje}", flush=True)
 
 def main():
-    def scrapeo_general():
+    def scrapeo_general(es_inicial=True):
         max_reintentos = 10
         espera_min = 3
         intentos = 0
@@ -243,24 +264,51 @@ def main():
             notifier.send_message_sync(mensaje)
             print(mensaje, flush=True)
             return False
-        for partido in partidos:
-            partido['alertado'] = False
-        guardar_partidos(partidos)
-        # Calcular resumen por deporte
-        resumen = {}
-        for partido in partidos:
-            d = partido.get('deporte', 'Otro')
-            resumen[d] = resumen.get(d, 0) + 1
-        total = len(partidos)
-        resumen_str = f"Partidos scrapeados para hoy: {total}\n" + "\n".join([f"{k}: {v}" for k, v in resumen.items()])
-        # Enviar resumen a Telegram
-        notifier = TelegramNotifier(settings.TELEGRAM_BOT_TOKEN, settings.TELEGRAM_CHAT_ID)
-        notifier.send_message_sync(resumen_str)
-        print(resumen_str, flush=True)
-        return True
+        
+        # Si no es el scraping inicial, comparar con partidos existentes
+        if not es_inicial:
+            partidos_existentes = cargar_partidos()
+            partidos_nuevos = comparar_partidos(partidos, partidos_existentes)
+            
+            if partidos_nuevos:
+                print(f"📍 Encontrados {len(partidos_nuevos)} partidos nuevos en actualización", flush=True)
+                # Agregar nuevos partidos a los existentes manteniendo el estado 'alertado'
+                for nuevo in partidos_nuevos:
+                    nuevo['alertado'] = False
+                partidos_actualizados = partidos_existentes + partidos_nuevos
+                guardar_partidos(partidos_actualizados)
+                
+                # Notificar partidos nuevos
+                notifier = TelegramNotifier(settings.TELEGRAM_BOT_TOKEN, settings.TELEGRAM_CHAT_ID)
+                mensaje_nuevos = f"🆕 Partidos nuevos detectados: {len(partidos_nuevos)}\n"
+                for p in partidos_nuevos:
+                    mensaje_nuevos += f"• {p.get('deporte', '')}: {p.get('equipo1', '')} vs {p.get('equipo2', '')} a las {p.get('hora', '')}\n"
+                notifier.send_message_sync(mensaje_nuevos)
+                print(mensaje_nuevos, flush=True)
+                return True
+            else:
+                print("📍 No se encontraron partidos nuevos en esta actualización", flush=True)
+                return False
+        else:
+            # Scraping inicial: resetear todos los partidos como no alertados
+            for partido in partidos:
+                partido['alertado'] = False
+            guardar_partidos(partidos)
+            # Calcular resumen por deporte y enviarlo solo en el scraping inicial de las 10 AM
+            resumen = {}
+            for partido in partidos:
+                d = partido.get('deporte', 'Otro')
+                resumen[d] = resumen.get(d, 0) + 1
+            total = len(partidos)
+            resumen_str = f"Partidos scrapeados para hoy: {total}\n" + "\n".join([f"{k}: {v}" for k, v in resumen.items()])
+            # Enviar resumen a Telegram solo en scraping inicial
+            notifier = TelegramNotifier(settings.TELEGRAM_BOT_TOKEN, settings.TELEGRAM_CHAT_ID)
+            notifier.send_message_sync(resumen_str)
+            print(resumen_str, flush=True)
+            return True
 
     print("Scrapeando partidos y guardando horas...", flush=True)
-    scrapeo_general()
+    scrapeo_general(es_inicial=True)
     print("Esperando partidos próximos para alerta...", flush=True)
     fecha_ultimo_scrapeo = datetime.now().date()
     scrapeo_realizado_hoy = True
@@ -269,10 +317,15 @@ def main():
 
     while True:
         ahora = datetime.now()
-        # Scrapeo general diario a las 10:00 AM con reintentos y aviso si no hay partidos
-        if ahora.hour == 10 and ahora.minute == 0:
-            print("Ejecutando scrapeo general programado de las 10:00 AM...", flush=True)
-            exito = scrapeo_general()
+        # Scrapeo general cada 3 horas: 10:00, 13:00, 16:00, 19:00
+        horas_scrapeo = [10, 13, 16, 19]
+        if ahora.hour in horas_scrapeo and ahora.minute == 0:
+            if ahora.hour == 10:
+                print("Ejecutando scrapeo general programado de las 10:00 AM (inicial del día)...", flush=True)
+                exito = scrapeo_general(es_inicial=True)
+            else:
+                print(f"Ejecutando scrapeo general programado de las {ahora.hour:02d}:00 (actualización)...", flush=True)
+                exito = scrapeo_general(es_inicial=False)
             # Esperar 60 segundos para evitar múltiples ejecuciones en el mismo minuto
             time.sleep(60)
         # Log periódico cada minuto para confirmar que el script está activo
@@ -281,7 +334,7 @@ def main():
         partidos = cargar_partidos()
         cambios = False
         # Solo hacer un re-scrapeo si hay partidos en rango
-        partidos_en_rango = [p for p in partidos if (dt := hora_a_datetime(p['fecha'], p['hora'])) and 14 <= (dt - ahora).total_seconds() / 60 <= 16 and not p.get('alertado', False)]
+        partidos_en_rango = [p for p in partidos if (dt := hora_a_datetime(p['fecha'], p['hora'])) and 9 <= (dt - ahora).total_seconds() / 60 <= 11 and not p.get('alertado', False)]
         nuevos_partidos = []
         if partidos_en_rango:
             print(f"[{ahora.strftime('%H:%M:%S')}] Re-escrapeando para partidos próximos...", flush=True)
@@ -291,7 +344,7 @@ def main():
             if not dt:
                 continue
             minutos = (dt - ahora).total_seconds() / 60
-            if 14 <= minutos <= 16 and not partido.get('alertado', False):
+            if 9 <= minutos <= 11 and not partido.get('alertado', False):
                 print(f"[{ahora.strftime('%H:%M:%S')}] Re-escrapeando: {partido['equipo1']} vs {partido['equipo2']}", flush=True)
                 partido_actualizado = None
                 for p in nuevos_partidos:
