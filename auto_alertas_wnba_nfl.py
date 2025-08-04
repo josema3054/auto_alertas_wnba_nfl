@@ -265,6 +265,11 @@ def enviar_alerta_scrapeo(partido):
     print(f"📋 Scrapeo enviado: {mensaje}", flush=True)
 
 def main():
+    # Variables para control de notificaciones de estado
+    alertas_enviadas_hoy = False
+    fecha_actual = datetime.now().date()
+    notificacion_estado_enviada = False
+    
     def scrapeo_general(es_inicial=True):
         max_reintentos = 10
         espera_min = 3
@@ -338,6 +343,60 @@ def main():
 
     while True:
         ahora = datetime.now()
+        
+        # Verificar si cambió el día para resetear variables de control
+        if ahora.date() != fecha_actual:
+            alertas_enviadas_hoy = False
+            notificacion_estado_enviada = False
+            fecha_actual = ahora.date()
+            print(f"[{ahora.strftime('%H:%M:%S')}] Nuevo día detectado, reseteando control de alertas", flush=True)
+        
+        # Enviar notificación de estado a las 20:00 si no se enviaron alertas
+        if ahora.hour == 20 and ahora.minute == 0 and not notificacion_estado_enviada:
+            if not alertas_enviadas_hoy:
+                notifier = TelegramNotifier(settings.TELEGRAM_BOT_TOKEN, settings.TELEGRAM_CHAT_ID)
+                partidos_hoy = cargar_partidos()
+                total_partidos = len(partidos_hoy)
+                
+                # Contar partidos por deporte para el resumen
+                deportes_resumen = {}
+                partidos_con_criterios = 0
+                for p in partidos_hoy:
+                    deporte = p.get('deporte', 'Otro')
+                    deportes_resumen[deporte] = deportes_resumen.get(deporte, 0) + 1
+                    if evaluar_condiciones_alerta(p):
+                        partidos_con_criterios += 1
+                
+                mensaje_estado = (
+                    f"📊 REPORTE DIARIO - {ahora.strftime('%d/%m/%Y')}\n\n"
+                    f"✅ Sistema funcionando correctamente\n"
+                    f"📈 Total partidos monitoreados: {total_partidos}\n"
+                    f"🎯 Partidos que cumplieron criterios: {partidos_con_criterios}\n"
+                    f"🚨 Alertas enviadas hoy: 0\n\n"
+                    f"📋 Resumen por deporte:\n"
+                )
+                
+                for deporte, cantidad in deportes_resumen.items():
+                    mensaje_estado += f"• {deporte}: {cantidad}\n"
+                
+                mensaje_estado += (
+                    f"\n🔍 Criterios de alerta actuales:\n"
+                    f"• NCAAB: Under ≥ 72%\n"
+                    f"• NBA: Under ≥ 65%\n"
+                    f"• MLB: Under ≥ 82%\n"
+                    f"• NFL: Under ≥ 68%\n"
+                    f"• CFL: Over ≥ 69%\n\n"
+                    f"⏰ Próximo scrapeo programado y seguimos monitoreando..."
+                )
+                
+                notifier.send_message_sync(mensaje_estado)
+                print(f"📊 Notificación de estado enviada a las 20:00", flush=True)
+            else:
+                print(f"📊 No se envía notificación de estado - se enviaron alertas hoy", flush=True)
+            
+            notificacion_estado_enviada = True
+            time.sleep(60)  # Esperar un minuto para evitar múltiples envíos
+        
         # Scrapeo general cada 3 horas: 10:00, 13:00, 16:00, 19:00
         horas_scrapeo = [10, 13, 16, 19]
         if ahora.hour in horas_scrapeo and ahora.minute == 0:
@@ -379,6 +438,7 @@ def main():
                 partido_alerta = partido_actualizado if partido_actualizado else partido
                 if evaluar_condiciones_alerta(partido_alerta):
                     enviar_alerta(partido_alerta)
+                    alertas_enviadas_hoy = True  # Marcar que se envió una alerta hoy
                 partido['alertado'] = True
                 cambios = True
         if cambios:
