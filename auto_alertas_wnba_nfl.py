@@ -204,6 +204,27 @@ def comparar_partidos(partidos_nuevos, partidos_existentes):
     
     return partidos_realmente_nuevos
 
+def evaluar_condiciones_alerta(partido):
+    """Evalúa si un partido cumple las condiciones específicas para enviar alerta"""
+    deporte = partido.get('deporte', '').upper()
+    porcentaje_under = partido.get('porcentaje_under', 0) or 0
+    porcentaje_over = partido.get('porcentaje_over', 0) or 0
+    
+    # Reglas específicas por deporte
+    if deporte == 'NCAAB' and porcentaje_under >= 72:
+        return True
+    elif deporte == 'NBA' and porcentaje_under >= 65:
+        return True
+    elif deporte == 'MLB' and porcentaje_under >= 82:
+        return True
+    elif deporte == 'NFL' and porcentaje_under >= 68:
+        return True
+    elif deporte == 'CFL' and porcentaje_over >= 69:
+        return True
+    
+    # Si no cumple ninguna condición o no está en la lista, no enviar alerta
+    return False
+
 ## Eliminar definición duplicada de hora_a_datetime
 def hora_a_datetime(fecha_str, hora_str):
     # fecha_str: '2025-07-27', hora_str: '22:31'
@@ -354,14 +375,9 @@ def main():
                         normalizar(p.get('hora')) == normalizar(partido.get('hora'))):
                         partido_actualizado = p
                         break
-                # Solo enviar alerta si over o under > 79%
-                alerta = False
+                # Evaluar si cumple las condiciones específicas de alerta por deporte
                 partido_alerta = partido_actualizado if partido_actualizado else partido
-                if partido_alerta.get('porcentaje_over', 0) and partido_alerta['porcentaje_over'] > 79:
-                    alerta = True
-                if partido_alerta.get('porcentaje_under', 0) and partido_alerta['porcentaje_under'] > 79:
-                    alerta = True
-                if alerta:
+                if evaluar_condiciones_alerta(partido_alerta):
                     enviar_alerta(partido_alerta)
                 partido['alertado'] = True
                 cambios = True
